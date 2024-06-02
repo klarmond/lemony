@@ -1,0 +1,262 @@
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+button:hover {
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+
+.nav {
+  padding-block: 0.5rem;
+}
+
+
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly ;
+  align-items: center;
+}
+
+.link-container {
+  display: flex;
+}
+
+.nav ul li{
+  margin-inline: 1rem;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.header {
+  background-color: #495e57;
+  color: #fff;
+  padding: 1rem;
+  /* font-size: 1.5rem; */
+  font-size: clamp(1rem,1.5vw,3rem);
+}
+
+.header h1 {
+  color: #f4ce14;
+  /* font-size: 6vw; */
+  font-size: clamp(2rem,3vw,6rem);
+}
+
+.header p {
+  padding-block: 1.5rem;
+  font-size: clamp(1rem,1.5vw,3rem);
+}
+
+.header-info{
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-auto-flow: column;
+}
+
+.header-info-img {
+  max-width: 200px;
+  max-height: 200px;
+  overflow:hidden;
+  /* position: relative; */
+  border-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.header-info img {
+  border-radius: 2rem;
+  
+}
+
+.reserve-btn {
+  background-color: #f4ce14;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  border: none;
+  font-weight: bold;
+}
+
+.reserve-btn:hover {
+  background-color: #cdaf16;
+}
+
+
+.main {
+
+}
+.order {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+.order h3 {
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+/* the div for btns */
+.order-btns {
+  overflow-x: auto;
+  white-space:nowrap;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.order-btns button {
+  color: #495e57;
+  background-color: #edefee;
+  border: none;
+  margin-inline: 0.5rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.order-btns button:hover {
+  background-color: #cbcecc;
+}
+
+/* the food to scroll through */
+.options {
+
+}
+
+
+/* remember that react is just passing one at a time to the specials, it's just one div */
+.specials {
+  /* display: flex;
+  justify-content:space-between; */
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  padding:1rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.427);
+  font-size: clamp(1rem,1.3vw,1.2rem);
+}
+
+
+.specials p {
+  padding-block: 0.5em;
+}
+
+.specials span{
+  color: #495e57;
+  
+}
+
+.specials-img {
+  max-width: 200px;
+  max-height: 200px;
+  overflow:hidden; 
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  aspect-ratio: 1/1;
+}
+
+.specials img {
+  /* max-width: 200px;
+  max-height: 200px; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* height: auto; */
+}
+
+
+
+
+
+
+/* START BOOKINGS PAGE */
+.form-container {
+  display: flex;
+  justify-content: center;
+  font-size: clamp(1rem,2vw,2rem);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #495e57;
+  padding: 5rem 10rem;
+  color: #fff;
+  border-radius: 2rem;
+}
+
+.booking-form label {
+  padding-top: 1.5rem;
+  padding-bottom: 0.2rem;
+}
+
+.booking-form input, select {
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  
+}
+
+.booking-form input:focus,
+.booking-form select:focus
+ {
+  outline: #f4cf148e 1px solid;
+}
+
+
+.booking-form button[type="submit"] {
+  background-color: #000000;
+  color: #fff;
+  border-radius: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  margin-top: 2rem;
+}
+
+.booking-form button[type="submit"]:hover {
+  background-color: #f4ce14;
+  color: #000000;
+}
+
+/* END BOOKINGS PAGE */
+
+
+
+
+/* Larger screens (tablets and up) */
+@media (min-width: 576px) {
+  .nav ul  {
+    flex-direction: row;
+  }
+}
+
+
+
+
+
+@media (min-width: 768px) {
+  
+}
+
+@media (min-width: 992px) {
+  
+}
+
+@media (min-width: 1200px) {
+  
+}
