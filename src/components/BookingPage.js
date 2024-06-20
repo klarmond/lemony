@@ -3,11 +3,11 @@ import Nav from './Nav'
 import Footer from './Footer'
 import BookingForm from './BookingForm'
 
-const BookingPage = ({availableTimes, setAvailableTimes}) => {
+const BookingPage = ({availableTimes, initializeTimes = () => {},  updateTimes, currDate, dispatch, submitForm}) => {
   return (
     <>
       <Nav/>
-      <BookingForm availableTimes={availableTimes} setAvailableTimes={setAvailableTimes}/>
+      <BookingForm availableTimes={availableTimes} initializeTimes={initializeTimes} updateTimes={updateTimes} currDate={currDate} dispatch={dispatch} submitForm={submitForm}/>
       <Footer/>
     </>
   )

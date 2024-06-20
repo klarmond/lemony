@@ -1,10 +1,10 @@
-import React from 'react'
+import "../styles/App.css"
 
-const BookingSlot = () => {
+const BookingSlot = ({slot}) => {
   return (
-    <div>
-        
-    </div>
+    <li className="time-item">
+      {slot}
+    </li>
   )
 }
 

@@ -7,23 +7,28 @@ import { Link } from 'react-router-dom'
 
 
 const Nav = () => {
-    const navRef = useRef(null);
-    const [navLength, setNavLength] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
 
+    const toggleOpen = () => {
+      setIsOpen(!isOpen);
+    }
     
 
   return (
-    <nav className='nav' ref={navRef}>
-        <ul>
-          {/* <img src={burger} alt="" /> */}
-          <div className='link-container'>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/bookings">Book</Link></li>
-            <li><Link to="/reviews">Reviews</Link></li>
+    <nav className='nav'>
+        {/* <img onClick={toggleOpen} src={burger} className='nav-burger' alt="" /> */}
+          <div className="nav-dropdown">
+            <img onClick={toggleOpen} src={burger} className='nav-burger' alt="" />
+            <div className={`link-container ${isOpen? "open": "hide"}`}>
+              <ul className="links" >
+                <li className='page-link'><Link to="/">Home</Link></li>
+                <li className='page-link'><Link to="/bookings">Book</Link></li>
+                <li className='page-link'><Link to="/reviews">Reviews</Link></li>
+              </ul>
+            </div>
           </div>
-          <li><a href=""><img src={logo} width="200" alt="logo" /></a></li>
-          <li><img src={r_icon} className='right-icon' alt="right icon" /></li>
-        </ul>
+          <li><Link to="/"><img src={logo} width="200" alt="logo" /></Link></li>
+          <li><img src={r_icon} className='right-icon' alt="right icon" /></li>     
     </nav>
   )
 }

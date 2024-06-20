@@ -10,7 +10,6 @@ const Home = () => {
         <Nav/>
         <Header/>
         <Main/>
-        
         <Footer/>
     </>
   )
